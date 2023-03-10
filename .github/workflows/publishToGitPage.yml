@@ -25,14 +25,15 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Echo GIT_CREDENTIALS
-      - name: Echo GIT_CREDENTIALS
-        run: echo ${{secrets.GIT_CREDENTIALS}}
-        
-      - name: Install SSH Client 🔑
-        uses: PhutureCorp/container-ssh-agent@v0.0.1
+      - name: action-github-app-token
+        # You may pin to the exact commit or the version.
+        # uses: getsentry/action-github-app-token@97c9e23528286821f97fba885c1b1123284b29cc
+        uses: getsentry/action-github-app-token@v2.0.0
         with:
-          ssh-private-key: ${{ secrets.SECRET_KEY }}
+          # GitHub App ID
+          app_id: mygithubpage
+          # Private key for the GitHub App
+          private_key:  ${{ secrets.SECRET_KEY }}
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
