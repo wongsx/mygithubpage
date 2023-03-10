@@ -29,13 +29,10 @@ jobs:
       - name: Echo GIT_CREDENTIALS
         run: echo ${{secrets.GIT_CREDENTIALS}}
         
-     # set git email
-      - name: Echo GIT_CREDENTIALS
-        run: git config --global user.email "wsxServiceAcc@github.com"
-        
-     # set git name
-      - name: Echo GIT_CREDENTIALS
-        run: git config --global user.name "wsxServiceAcc"
+      - name: Install SSH Client 🔑
+        uses: webfactory/ssh-agent@v0.4.0
+        with:
+          ssh-private-key: ${{ secrets.DEPLOY_KEY }}
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
