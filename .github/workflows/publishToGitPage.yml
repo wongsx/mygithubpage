@@ -42,9 +42,5 @@ jobs:
         
       # Runs a single command using the runners shell
       - name: Deploy to github page
-        run: git remote set-url origin https://wongsx:sui@90431404@github.com/wongsx/mygithubpage.git
-        
-      # Runs a single command using the runners shell
-      - name: Deploy to github page
         run: npm run deploy
         
