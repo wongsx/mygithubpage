@@ -38,5 +38,13 @@ jobs:
         
       # Runs a single command using the runners shell
       - name: Deploy to github page
+        run: git config --global user.email "suixiang88@hotmail.com"
+        
+      # Runs a single command using the runners shell
+      - name: Deploy to github page
+        run: git config --global user.name "wongsx"
+        
+      # Runs a single command using the runners shell
+      - name: Deploy to github page
         run: npm run deploy
         
