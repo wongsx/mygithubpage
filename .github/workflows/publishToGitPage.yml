@@ -28,11 +28,7 @@ jobs:
       # Echo GIT_CREDENTIALS
       - name: Echo GIT_CREDENTIALS
         run: echo ${{secrets.GIT_CREDENTIALS}}
-    
-      - uses: de-vri-es/setup-git-credentials@v2
-        with:
-         credentials: ${{secrets.GIT_CREDENTIALS}}
-          
+
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       
