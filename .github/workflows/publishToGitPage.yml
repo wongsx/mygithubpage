@@ -32,7 +32,7 @@ jobs:
       - name: Install SSH Client 🔑
         uses: webfactory/ssh-agent@v0.4.0
         with:
-          ssh-private-key: ${{ secrets.DEPLOY_KEY }}
+          ssh-private-key: ${{ secrets.SECRET_KEY }}
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
