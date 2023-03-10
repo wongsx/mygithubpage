@@ -31,6 +31,8 @@ jobs:
       
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
+      - run: npm install
+      - run: npm run build
 
       - name: Deploy to GH Pages 🚀
         uses: crazy-max/ghaction-github-pages@v3.1.0
