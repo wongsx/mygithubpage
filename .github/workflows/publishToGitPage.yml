@@ -28,6 +28,14 @@ jobs:
       # Echo GIT_CREDENTIALS
       - name: Echo GIT_CREDENTIALS
         run: echo ${{secrets.GIT_CREDENTIALS}}
+        
+     # set git email
+      - name: Echo GIT_CREDENTIALS
+        run: git config --global user.email "wsxServiceAcc@github.com"
+        
+     # set git name
+      - name: Echo GIT_CREDENTIALS
+        run: git config --global user.name "wsxServiceAcc"
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
