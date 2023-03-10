@@ -37,5 +37,9 @@ jobs:
         
      # Runs a single command using the runners shell
       - name: Run deploy of github
+        run: ls
+        
+     # Runs a single command using the runners shell
+      - name: Run deploy of github
         run: sudo npm run deploy
 
