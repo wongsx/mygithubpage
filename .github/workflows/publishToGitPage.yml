@@ -40,7 +40,8 @@ jobs:
       - name: Deploy to github page
         run: git config --global user.email "suixiang88@hotmail.com"
         
-      # Runs a single command using the runners shell
-      - name: Deploy to github page
-        run: npm run deploy
-        
+      - name: Deploy to GH Pages 🚀
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: public
