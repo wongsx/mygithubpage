@@ -33,7 +33,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run install of react packages
-        run: npm run install
+        run: npm install
         
      # Runs a single command using the runners shell
       - name: Run deploy of github
