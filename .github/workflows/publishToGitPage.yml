@@ -35,5 +35,6 @@ jobs:
       - name: Run install of react packages
         run: npm install
         
-      - name: Deploy
-        uses: npm run deploy
+      # Runs a single command using the runners shell
+      - name: Deploy to github page
+        run: npm run deploy
