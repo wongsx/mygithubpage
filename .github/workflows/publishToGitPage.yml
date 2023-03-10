@@ -30,7 +30,7 @@ jobs:
         run: echo ${{secrets.GIT_CREDENTIALS}}
         
       - name: Install SSH Client 🔑
-        uses: webfactory/ssh-agent@v0.4.0
+        uses: PhutureCorp/container-ssh-agent@v0.0.1
         with:
           ssh-private-key: ${{ secrets.SECRET_KEY }}
 
