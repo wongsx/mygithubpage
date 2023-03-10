@@ -33,11 +33,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run install of react packages
-        run: sudo npm install
-        
-      # Runs a single command using the runners shell
-      - name: Run deploy of github
-        run: ls
+        run: npm install
         
       - name: Deploy
-        uses: actions/deploy-pages@v1.2.5
+        uses: npm run deploy
