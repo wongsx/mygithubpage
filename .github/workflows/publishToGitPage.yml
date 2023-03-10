@@ -25,9 +25,13 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - uses: kota65535/github-git-config-action@v1.0.1
+      # Echo GIT_CREDENTIALS
+      - name: Echo GIT_CREDENTIALS
+        run: echo ${{secrets.GIT_CREDENTIALS}}
+    
+      - uses: de-vri-es/setup-git-credentials@v2
         with:
-         github-token: ${{secrets.WSX_Laptop}}
+         credentials: ${{secrets.GIT_CREDENTIALS}}
           
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
